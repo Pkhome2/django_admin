@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  {% load static %}
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
+  <title>{% block title %}login{% endblock %}</title>
+</head>
+
+<body>
+
+
+  {% block main %}"nav-link active"{% endblock %}
+
+{% block content %}
+  <div class="container">
+  <div class="row">
+    <div class="col-8" style="margin: 50px;">
+      <div class="display-2">
+        <span class="badge bg-primary">Страница авторизации пользователя</span>
+      </div>
+    </div>
+  </div>
+    <form method="post">
+      <div class="row mb-3">
+        <div class="col">
+          <label class="col-sm-4 col-form-label offset-4">Username</label>
+          <div class="col-sm-4 offset-4 w-25">
+            <input type="text" class="form-control form-control-lg">
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <label class="col-sm-4 col-form-label offset-4">Password</label>
+          <div class="col-sm-4 offset-4 w-25">
+            <input type="password" class="form-control form-control-lg">
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3 offset-sm-5">
+        <div class="col">
+          <button type="submit" class="btn btn-success">Принять</button>
+        </div>
+      </div>
+    </form>
+  </div>
+{% endblock %}
+<footer style="padding: 100px;" class="bg-primary">
+  </footer>
+
+</body>
+</html>
